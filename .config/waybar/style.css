@@ -1,0 +1,110 @@
+@import "./theme.css";
+
+* {
+    font-family: Roboto, "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    font-weight: 500;
+    color: @white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-feature-settings: "tnum";
+}
+
+window#waybar {
+    background: @dark;
+    border-radius: 0 0 12px 12px;
+    border: 1px solid @dark-grey;
+    border-top: none;
+    box-shadow: none;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* SPACING */
+
+/* 24px gap before every text module */
+#clock.date, #tray, #workspaces,
+#cpu, #temperature, #memory, #custom-diskio,
+#network, #pulseaudio, #language,
+#custom-backlight, #battery {
+    margin-left: 24px;
+}
+
+#tray {
+    border-left: 1px solid @dark-grey;
+    border-right: 1px solid @dark-grey;
+    padding: 0 24px;
+}
+
+/* Bar edges */
+#clock.time {
+    margin-left: 12px;
+}
+
+#language {
+    margin-right: 16px;
+}
+
+/* Workspace buttons already have 6px margin, so 18 + 6 = 24 visible */
+#workspaces {
+    margin-left: 18px;
+}
+
+/* STATES */
+
+#cpu.warning, #cpu.warning label,
+#memory.warning, #memory.warning label {
+    color: @yellow;
+}
+
+#cpu.critical, #cpu.critical label,
+#memory.critical, #memory.critical label {
+    color: @red;
+}
+
+#pulseaudio.source-muted, #pulseaudio.source-muted label,
+#network.disconnected, #network.disconnected label {
+    color: @red;
+}
+
+#pulseaudio.muted, #pulseaudio.muted label {
+    color: @grey;
+}
+
+#temperature.critical, #temperature.critical label {
+    color: @red;
+}
+
+/* WORKSPACES */
+
+#workspaces button {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+#workspaces button label {
+    color: @grey;
+}
+
+#workspaces button:hover label {
+    color: @white;
+}
+
+#workspaces button.active label {
+    color: @white;
+    font-weight: 600;
+}
+
+#workspaces button.urgent label {
+    color: @yellow;
+    font-weight: 600;
+}
+
+/* WINDOW */
+
+#window label {
+    padding-left: 24px;
+    color: @grey;
+}

@@ -1,0 +1,53 @@
+[window]
+opacity = 1
+
+[window.padding]
+x = 18
+y = 18
+
+[font]
+size = 10.5
+
+[font.offset]
+x = 1
+y = 0
+
+[font.normal]
+family = "Roboto Mono"
+style = "Regular"
+
+[colors.primary]
+background = "#090909"
+foreground = "#CCCCDB"
+
+[colors.cursor]
+text   = "#0A0A10"
+cursor = "#F985F0"
+
+[colors.vi_mode_cursor]
+text   = "#0A0A10"
+cursor = "#44D6D6"
+
+[colors.selection]
+text       = "CellForeground"
+background = "#562353"
+
+[colors.normal]
+black   = "#0A0A10"
+red     = "#F75C66"
+green   = "#41D686"
+yellow  = "#E3C23B"
+blue    = "#618DF3"
+magenta = "#D961D2"
+cyan    = "#44D6D6"
+white   = "#9D9DA8"
+
+[colors.bright]
+black   = "#59596B"
+red     = "#FF8F90"
+green   = "#66F5A2"
+yellow  = "#FDDC5B"
+blue    = "#8BAFFF"
+magenta = "#F985F0"
+cyan    = "#77F2F1"
+white   = "#E7E7EE"

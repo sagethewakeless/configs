@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doublecmd>
+  <Tabs>
+    <OpenedTabs>
+      <Left>
+        <ActiveTab>0</ActiveTab>
+        <Tab>
+          <FileView Type="thumbnails">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="drive2">/mnt/</Path>
+                  <Path Filename="recordings">/mnt/drive2/</Path>
+                  <Path Filename="..">/mnt/drive2/recordings/</Path>
+                  <Path Filename="recordings">/mnt/drive2/</Path>
+                  <Path Filename="">/mnt/drive2/recordings/</Path>
+                  <Path Filename="..">/home/sage/Screenshots/</Path>
+                  <Path Filename="Screenshots">/home/sage/</Path>
+                  <Path Filename="sage">/home/</Path>
+                  <Path Filename="home">/</Path>
+                  <Path Filename="sage">/home/</Path>
+                  <Path Filename="Drive2">/home/sage/</Path>
+                  <Path Filename="games">/home/sage/Drive2/</Path>
+                  <Path Filename="gd">/home/sage/Drive2/games/</Path>
+                  <Path Filename="Geometry Dash">/home/sage/Drive2/games/gd/</Path>
+                  <Path Filename="">/home/sage/Drive2/games/gd/Geometry Dash/</Path>
+                  <Path Filename="..">/home/sage/Screenshots/</Path>
+                  <Path Filename="Downloads">/home/sage/</Path>
+                  <Path Filename="">/home/sage/Downloads/</Path>
+                  <Path Filename="..">/home/sage/Screenshots/</Path>
+                  <Path Filename="Downloads">/home/sage/</Path>
+                  <Path Filename="">/home/sage/Downloads/</Path>
+                  <Path Filename="2026-11-03-180609_hyprshot.png">/home/sage/Screenshots/</Path>
+                  <Path Filename="Screenshots">/home/sage/</Path>
+                  <Path Filename="sage">/home/</Path>
+                  <Path Filename="KDEConnect">/home/sage/</Path>
+                  <Path Filename="">/home/sage/KDEConnect/</Path>
+                  <Path Filename="..">/home/sage/.local/share/PrismLauncher/instances/26.3.back/</Path>
+                  <Path Filename="..">/home/sage/.local/share/PrismLauncher/instances/</Path>
+                  <Path Filename="instances">/home/sage/.local/share/PrismLauncher/</Path>
+                  <Path Filename="..">/home/sage/.local/share/PrismLauncher/instances/</Path>
+                  <Path Filename="..">/home/sage/.local/share/PrismLauncher/</Path>
+                  <Path Filename="..">/home/sage/.local/share/</Path>
+                  <Path Filename="..">/home/sage/.local/</Path>
+                  <Path Filename="Drive2">/home/sage/</Path>
+                  <Path Filename="recordings">/home/sage/Drive2/</Path>
+                  <Path Filename="">/home/sage/Drive2/recordings/</Path>
+                  <Path Filename="">/home/sage/./</Path>
+                  <Path Filename="..">/home/sage/Drive2/</Path>
+                  <Path Filename=".config">/home/sage/</Path>
+                  <Path Filename="hypr">/home/sage/.config/</Path>
+                  <Path Filename="">/home/sage/.config/hypr/</Path>
+                  <Path Filename=".cache">/home/sage/./</Path>
+                  <Path Filename="..">/home/sage/./.cache/</Path>
+                  <Path Filename=".android">/home/sage/./</Path>
+                  <Path Filename="..">/home/sage/./.android/</Path>
+                  <Path Filename="Drive2">/home/sage/./</Path>
+                  <Path Filename="recordings">/home/sage/./Drive2/</Path>
+                  <Path Filename="..">/home/sage/./Drive2/recordings/</Path>
+                  <Path Filename="recordings">/home/sage/./Drive2/</Path>
+                  <Path Filename="Video_2026-11-09_12-11-11.mp4">/home/sage/./Drive2/recordings/</Path>
+                </Paths>
+              </Entry>
+            </History>
+          </FileView>
+        </Tab>
+      </Left>
+      <Right>
+        <ActiveTab>0</ActiveTab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">/usr/lib/doublecmd/</Path>
+                  <Path Filename="..">/home/sage/./.cache/</Path>
+                  <Path Filename="..">/home/sage/./</Path>
+                  <Path Filename="..">/home/sage/./.android/</Path>
+                  <Path Filename="..">/home/sage/./</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+      </Right>
+    </OpenedTabs>
+  </Tabs>
+</doublecmd>

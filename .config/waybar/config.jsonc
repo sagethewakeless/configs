@@ -1,0 +1,158 @@
+{
+///////////////////////
+// BAR CONFIGURATION //
+///////////////////////
+
+    "margin-top": 0,
+    "margin-left": 19,
+    "margin-right": 19,
+    "height": 36,
+
+/////////////
+// MODULES //
+/////////////
+
+    "modules-left": [
+        "clock#time","clock#date","custom/dayofweek",
+        "pulseaudio#speaker","pulseaudio#mic",
+        "tray",
+        "hyprland/workspaces"
+    ],
+
+    "modules-center": [ "hyprland/window" ],
+
+    "modules-right": [
+        "cpu",
+        "memory",
+        "custom/diskio",
+        "network",
+        "custom/backlight","battery","battery#bat2",
+        "hyprland/language"
+    ],
+
+///////////////////
+// CONFIGURATION //
+///////////////////
+
+    "clock#time": {
+        "format": "{:%I %M %p}",
+        "min-length": 8,
+        "interval": 60
+    },
+    "clock#date": {
+        "format": "{:%d %m}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "min-length": 5,
+        "interval": 60
+    },
+    "custom/dayofweek": {
+        "min-length": 3,
+        "interval": 60,
+        "exec": "date '+%a' | tr '[:lower:]' '[:upper:]'"
+    },
+
+    "hyprland/workspaces": {
+        "format": "{name}"
+    },
+
+    "hyprland/window": {
+        "format": "{title}",
+        "rewrite": {
+            "(.{80}).+": "$1…"
+        }
+    },
+
+    "custom/diskio": {
+        "exec": "~/.config/waybar/diskio.sh",
+        "return-type": "json",
+        "min-length": 9
+    },
+
+    "cpu": {
+        "states": { "warning": 70, "critical": 90 },
+        "format": "{usage}%   <span font_size='large'>\uf2db</span>",
+        "min-length": 9,
+        "interval": 2
+    },
+
+    "temperature": {
+        "hwmon-path-abs": ["/sys/devices/REPLACE_WITH_DESKTOP_PATH/hwmon"],
+        "input-filename": "temp1_input",
+        "critical-threshold": 85,
+        "format": "{temperatureC}°C   \uf2c9",
+        "min-length": 8,
+        "interval": 2
+    },
+
+    "memory": {
+        "states": { "warning": 70, "critical": 90 },
+        "format": "{avail:.1f} GiB   <span font_size='large'>\uefc5</span>",
+        "min-length": 12
+    },
+
+    "network": {
+        "format-wifi": "{bandwidthDownBytes} WIFI {signalStrength}%   <span font_size='large'>\uf0dc</span>",
+        "format-ethernet": "{bandwidthDownBytes} WIRED   <span font_size='large'>\uf0dc</span>",
+        "format-disconnected": "DISCONNECTED   <span font_size='large'>\uf0dc</span>",
+        "interval": 2,
+        "min-length": 19
+    },
+
+    "pulseaudio#speaker": {
+        "format": "{volume}%   <span font_size='large'>{icon}</span>",
+        "format-muted": "M   <span font_size='large'>{icon}</span>",
+        "min-length": 9,
+        "format-icons": {
+            "headphone": "\uf025",
+            "default": "\uf028"
+        }
+    },
+    "pulseaudio#mic": {
+        "format": "{format_source}",
+        "format-source": "{volume}%   <span font_size='large'>\uf130</span>",
+        "format-source-muted": "M   <span font_size='large'>\uf131</span>",
+        "min-length": 9
+    },
+
+    "hyprland/language": {
+        "format": "{}   <span font_size='large'>\udb80\udf0c</span>",
+        "format-en": "EN",
+        "format-ru": "RU",
+        "min-length": 6
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 16,
+        "icons": {
+           "blueman": "bluetooth",
+           "KDE Connect Indicator": "kdeconnect-tray-symbolic",
+           "gpu-screen-recorder-ui": "media-record-symbolic",
+           "TelegramDesktop": "paper-plane-symbolic"
+        }
+    },
+
+    "custom/backlight": {
+        "exec-if": "test -d /sys/class/backlight/intel_backlight",
+        "exec": "echo $(( $(cat /sys/class/backlight/intel_backlight/brightness) * 100 / $(cat /sys/class/backlight/intel_backlight/max_brightness) ))",
+        "format": "{}%   <span font_size='large'>\udb80\udcdf</span>",
+        "interval": 1,
+        "min-length": 9
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}%   <span font_size='large'>{icon}</span>",
+        "format-full": "{capacity}%   <span font_size='large'>{icon}</span>",
+        "format-charging": "{capacity}%   <span font_size='large'>\uf0e7</span>",
+        "format-plugged": "{capacity}%   <span font_size='large'>\uf1e6</span>",
+        "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
+        "min-length": 9
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    }
+}

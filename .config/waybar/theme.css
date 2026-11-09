@@ -1,0 +1,8 @@
+@define-color dark rgba(15, 15, 15, 0.999);     /* #0F0F0F */
+@define-color white rgba(224, 224, 224, 1);     /* #E0E0E0 */
+@define-color grey rgba(102, 102, 102, 1);      /* #666666 */
+@define-color dark-grey rgba(50, 50, 50, 1);      /* #666666 */
+
+@define-color green rgba(117, 215, 215, 1);     /* #75D7D7, border cyan */
+@define-color yellow rgba(215, 215, 117, 1);    /* #D7D775, border olive */
+@define-color red rgba(215, 117, 215, 1);       /* #D775D7, border magenta */
