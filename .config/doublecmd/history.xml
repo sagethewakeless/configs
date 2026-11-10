@@ -2,15 +2,11 @@
 <doublecmd>
   <History>
     <Navigation>
-      <Item Value="/home/sage/./Drive2/recordings/"/>
-      <Item Value="/home/sage/./Drive2/"/>
-      <Item Value="/home/sage/./"/>
-      <Item Value="/home/sage/./.android/"/>
-      <Item Value="/home/sage/./.cache/"/>
-      <Item Value="/home/sage/.config/hypr/"/>
       <Item Value="/home/sage/.config/"/>
       <Item Value="/home/sage/"/>
+      <Item Value="/home/sage/.config/hypr/"/>
       <Item Value="/home/sage/Drive2/"/>
+      <Item Value="/home/sage/./"/>
       <Item Value="/home/sage/Drive2/recordings/"/>
       <Item Value="/home/sage/.local/"/>
       <Item Value="/home/sage/.local/share/"/>
@@ -53,6 +49,9 @@
       <Item Value="/mnt/usb2/Users/колдуй давай/Music/"/>
       <Item Value="/mnt/usb2/Users/колдуй давай/Favorites/"/>
       <Item Value="/mnt/usb2/Users/колдуй давай/Documents/"/>
+      <Item Value="/mnt/usb2/Users/колдуй давай/Documents/My Games/"/>
+      <Item Value="/mnt/usb2/Users/колдуй давай/Documents/My Games/Skyrim Special Edition/"/>
+      <Item Value="/mnt/usb2/Users/колдуй давай/Documents/My Games/Skyrim Special Edition/Saves/"/>
     </Navigation>
     <CommandLine/>
     <FileMask/>

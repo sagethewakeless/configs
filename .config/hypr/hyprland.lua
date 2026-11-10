@@ -93,14 +93,14 @@ hl.env("QT_QUICK_CONTROLS_STYLE", "org.kde.desktop")
 hl.config({
     general = {
         gaps_in  = 9,
-        gaps_out = 18,
+        gaps_out = 28,
         float_gaps = 36,
 
-        border_size = 3,
+        border_size = 1,
 
         col = {
             active_border   = { colors = {"rgba(8f008fff)", "rgba(008f8fff)", "rgba(8f8f00ff)"}, angle = 45 },
-            inactive_border = "rgba(121212ff)",
+            inactive_border = "rgba(323232ff)",
         },
 
         resize_on_border = false,
