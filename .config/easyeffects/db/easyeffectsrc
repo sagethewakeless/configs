@@ -6,9 +6,9 @@ visiblePlugin=equalizer#0
 
 [StreamOutputs]
 outputDevice=alsa_output.pci-0000_0b_00.3.analog-stereo
-plugins=equalizer#0,equalizer#1,midside_equalizer#0
+plugins=equalizer#0,equalizer#1
 visiblePage=pluginsPage
-visiblePlugin=equalizer#1
+visiblePlugin=equalizer#0
 
 [Style]
 forceBreezeTheme=false
@@ -16,5 +16,5 @@ forceBreezeTheme=false
 [Window]
 autostartOnLogin=true
 englishLanguage=true
-height=1362
-width=3398
+height=1346
+width=3382

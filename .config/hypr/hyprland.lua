@@ -336,7 +336,7 @@ end
 end)
 
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("cliphist list | fuzzel --dmenu --lines 20 --width 92 | cliphist decode | wl-copy"))
+hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("cliphist list | fuzzel --dmenu --lines 18 --width 92 | cliphist decode | wl-copy"))
 
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 
