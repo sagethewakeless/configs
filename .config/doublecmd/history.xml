@@ -2,8 +2,10 @@
 <doublecmd>
   <History>
     <Navigation>
-      <Item Value="/home/sage/.config/"/>
+      <Item Value="/home/sage/Screenshots/"/>
+      <Item Value="/home/sage/Downloads/"/>
       <Item Value="/home/sage/"/>
+      <Item Value="/home/sage/.config/"/>
       <Item Value="/home/sage/.config/hypr/"/>
       <Item Value="/home/sage/Drive2/"/>
       <Item Value="/home/sage/./"/>
@@ -12,10 +14,8 @@
       <Item Value="/home/sage/.local/share/"/>
       <Item Value="/home/sage/.local/share/PrismLauncher/"/>
       <Item Value="/home/sage/.local/share/PrismLauncher/instances/"/>
-      <Item Value="/home/sage/Screenshots/"/>
       <Item Value="/home/sage/.local/share/PrismLauncher/instances/26.3.back/"/>
       <Item Value="/home/sage/KDEConnect/"/>
-      <Item Value="/home/sage/Downloads/"/>
       <Item Value="/home/"/>
       <Item Value="/home/sage/Drive2/games/gd/Geometry Dash/"/>
       <Item Value="/home/sage/Drive2/games/gd/"/>

@@ -230,7 +230,7 @@ hl.config({
         hide_on_key_press = true,
         inactive_timeout = 2,
         persistent_warps = true,
-        no_hardware_cursors = true,
+        no_hardware_cursors = false,
     },
 })
 
@@ -300,7 +300,7 @@ hl.bind(mainMod .. " + V", function()
     hl.dispatch(hl.dsp.window.float({ action = "unset", window = w }))
   else
     hl.dispatch(hl.dsp.window.float({ action = "set", window = w }))
-    hl.dispatch(hl.dsp.window.resize({ x = 1600, y = 1280, window = w }))
+    hl.dispatch(hl.dsp.window.resize({ x = 1400, y = 1200, window = w }))
     hl.dispatch(hl.dsp.window.center({ window = w }))
   end
 end)
@@ -345,8 +345,6 @@ hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(messenger))
 hl.bind(mainMod .. " + f12", hl.dsp.exec_cmd("systemctl suspend"))
 hl.bind(mainMod .. " + Delete", hl.dsp.exec_cmd("systemctl hibernate"))
 
--- hl.bind(mainMod .. " + P", hl.dsp.window.pseudo()) -- Useless (?)
-
 hl.bind(mainMod .. " + O", hl.dsp.layout("togglesplit"))    -- dwindle only
 
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("hyprlock"))
@@ -355,35 +353,35 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle", mode = 
 
 -- hyprshot & hyprpicker
 --
--- Backslash — Open the Screenshot directory
--- 
--- Super + Semicolon                — Fullscreen
--- Super + Apostrophe               — Region
--- Super + Shift + Semicolon        — Window
+-- Key decides the action:
 --
--- Super + Shift + Apostrophe       — hyprpicker
+--  ; — save & copy
+--  ' — open in satty
 --
--- Super + Ctrl + Semicolon         — Fullscreen + satty
--- Super + Ctrl + Apostrophe        — Region + satty
--- Super + Ctrl + Apostrophe        — Window + satty
+-- Modifier decides the target:
 --
+--  (none)      — region
+--  Shift       — window
+--  Ctrl        — fullscreen
 --
+-- Extra:
+--
+--  P           — hyprpicker
+--  Backslash   — open the Screenshots directory
+
+-- save & copy
+hl.bind(mainMod .. " + semicolon",           hl.dsp.exec_cmd("hyprshot -m region -z"))
+hl.bind(mainMod .. " + SHIFT + semicolon",   hl.dsp.exec_cmd("hyprshot -m window -m active"))
+hl.bind(mainMod .. " + CTRL + semicolon",     hl.dsp.exec_cmd("hyprshot -m output -m active"))
+
+-- satty
+hl.bind(mainMod .. " + apostrophe",          hl.dsp.exec_cmd([[hyprshot -m region -z --raw | satty --filename - --early-exit --copy-command wl-copy]]))
+hl.bind(mainMod .. " + SHIFT + apostrophe",  hl.dsp.exec_cmd([[hyprshot -m window -m active --raw | satty --filename - --early-exit --copy-command wl-copy]]))
+hl.bind(mainMod .. " + CTRL + apostrophe",    hl.dsp.exec_cmd([[hyprshot -m output -m active --raw | satty --filename - --early-exit --copy-command wl-copy]]))
+
+-- extra
 hl.bind(mainMod .. " + backslash", hl.dsp.exec_cmd(fileManager .. " /home/sage/Screenshots"))
-
-hl.bind(mainMod .. " + semicolon", hl.dsp.exec_cmd("hyprshot -m output -m active"))
-hl.bind(mainMod .. " + apostrophe", hl.dsp.exec_cmd("hyprshot -m output -m region -z"))
-
-hl.bind(mainMod .. " + SHIFT + semicolon", hl.dsp.exec_cmd("hyprshot -m window -m active"))
-hl.bind(mainMod .. " + SHIFT + apostrophe", hl.dsp.exec_cmd([[hyprpicker -a | xargs -I{} notify-send "Color copied" "{}"]]))
-
-hl.bind(mainMod .. " + CTRL + semicolon", hl.dsp.exec_cmd(
-  [[hyprshot -m output -m active --raw | satty --filename - --early-exit --copy-command wl-copy]]))
-
-hl.bind(mainMod .. " + CTRL + apostrophe", hl.dsp.exec_cmd(
-  [[hyprshot -m output -m region -z --raw | satty --filename - --early-exit --copy-command wl-copy]]))
-    
-hl.bind(mainMod .. " + SHIFT + CTRL + semicolon", hl.dsp.exec_cmd(
-  [[hyprshot -m window -m active --raw | satty --filename - --early-exit --copy-command wl-copy]]))
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd([[hyprpicker -a | xargs -I{} notify-send "Color copied" "{}"]]))
 
 -- Move focus
 hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))
@@ -435,25 +433,25 @@ hl.bind(mainMod .. " + SHIFT + N", hl.dsp.window.cycle_next({ next = false, floa
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),      { locked = true, repeating = true })
 
-hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),     { locked = true, repeating = true })
+hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),     { locked = true, repeating = false })
 
 hl.bind(mainMod .. " + XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SOURCE@ 5%+"), { locked = true, repeating = true })
 hl.bind(mainMod .. " + XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-"),      { locked = true, repeating = true })
 
-hl.bind("XF86AudioMicMute",     hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),   { locked = true, repeating = true })
-hl.bind(mainMod .. " + XF86AudioMute",    hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"), { locked = true, repeating = true })
-hl.bind(mainMod .. " + XF86AudioMicMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"), { locked = true, repeating = true })
+hl.bind("XF86AudioMicMute",     hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),   { locked = true, repeating = false })
+hl.bind(mainMod .. " + XF86AudioMute",    hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"), { locked = true, repeating = false })
+hl.bind(mainMod .. " + XF86AudioMicMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"), { locked = true, repeating = false })
 
 -- Laptop (SUPER + F1/F2/F3)
 hl.bind(mainMod .. " + f3", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
 hl.bind(mainMod .. " + f2", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),      { locked = true, repeating = true })
 
-hl.bind(mainMod .. " + f1", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),     { locked = true, repeating = true })
+hl.bind(mainMod .. " + f1", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),     { locked = true, repeating = false })
 
 hl.bind(mainMod .. " + SHIFT + f3", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SOURCE@ 5%+"), { locked = true, repeating = true })
 hl.bind(mainMod .. " + SHIFT + f2", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-"),      { locked = true, repeating = true })
 
-hl.bind(mainMod .. " + SHIFT + f1", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),   { locked = true, repeating = true })
+hl.bind(mainMod .. " + SHIFT + f1", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),   { locked = true, repeating = false })
 
 -- Switch the output
 -- Toggle default sink port: headphones <-> line out (speakers)

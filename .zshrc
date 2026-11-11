@@ -122,3 +122,6 @@ d() {
     doublecmd --no-splash "$@" >/dev/null 2>&1 &!
 }
 alias c='clear'
+
+# Created by `pipx` on 2026-11-11 13:33:29
+export PATH="$PATH:/home/sage/.local/bin"

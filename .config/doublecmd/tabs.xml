@@ -63,8 +63,9 @@
                   <Path Filename="">/home/sage/Drive2/recordings/</Path>
                   <Path Filename="">/home/sage/./</Path>
                   <Path Filename="..">/home/sage/Drive2/</Path>
-                  <Path Filename=".config">/home/sage/</Path>
-                  <Path Filename="helium.7z">/home/sage/.config/</Path>
+                  <Path Filename="Downloads">/home/sage/</Path>
+                  <Path Filename="">/home/sage/Downloads/</Path>
+                  <Path Filename="2026-11-11-232621_hyprshot.png">/home/sage/Screenshots/</Path>
                 </Paths>
               </Entry>
             </History>
