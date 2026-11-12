@@ -94,7 +94,7 @@ hl.config({
     general = {
         gaps_in  = 9,
         gaps_out = 28,
-        float_gaps = 36,
+        float_gaps = 54,
 
         border_size = 1,
 
@@ -300,7 +300,7 @@ hl.bind(mainMod .. " + V", function()
     hl.dispatch(hl.dsp.window.float({ action = "unset", window = w }))
   else
     hl.dispatch(hl.dsp.window.float({ action = "set", window = w }))
-    hl.dispatch(hl.dsp.window.resize({ x = 1400, y = 1200, window = w }))
+    hl.dispatch(hl.dsp.window.resize({ x = 1200, y = 1000, window = w }))
     hl.dispatch(hl.dsp.window.center({ window = w }))
   end
 end)
@@ -315,7 +315,7 @@ hl.bind(mainMod .. " + SHIFT + V", function()
   else
     hl.dispatch(hl.dsp.window.float({ action = "set", window = w }))
     hl.dispatch(hl.dsp.window.resize({ x = 440, y = 640, window = w }))
-    hl.dispatch(hl.dsp.window.move({ x = 40, y = 300, window = w }))
+    hl.dispatch(hl.dsp.window.move({ x = 54, y = 300, window = w }))
   end
 end)
 
@@ -545,7 +545,6 @@ hl.window_rule({
 })
 
 -- Waydroid
-
 hl.window_rule({
     name   = "waydroid-full-ui",
     match  = { class = "^Waydroid$" },

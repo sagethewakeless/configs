@@ -16,8 +16,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">/home/sage/.cache/kioexec/</Path>
-                  <Path Filename="kioexec">/home/sage/.cache/</Path>
                   <Path Filename="krun">/home/sage/.cache/kioexec/</Path>
                   <Path Filename="228460_0">/home/sage/.cache/kioexec/krun/</Path>
                   <Path Filename="">/home/sage/.cache/kioexec/krun/228460_0/</Path>
@@ -63,9 +61,8 @@
                   <Path Filename="">/home/sage/Drive2/recordings/</Path>
                   <Path Filename="">/home/sage/./</Path>
                   <Path Filename="..">/home/sage/Drive2/</Path>
-                  <Path Filename="Downloads">/home/sage/</Path>
-                  <Path Filename="">/home/sage/Downloads/</Path>
-                  <Path Filename="2026-11-11-232621_hyprshot.png">/home/sage/Screenshots/</Path>
+                  <Path Filename="KDEConnect">/home/sage/</Path>
+                  <Path Filename="Screenshot_20261108-205915_Seedvault.png">/home/sage/KDEConnect/</Path>
                 </Paths>
               </Entry>
             </History>
